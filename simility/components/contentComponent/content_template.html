@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="./components/contentComponent/content_style.css">
+<div id="content" class="" layout="column">
+    <div class="" flex="auto" layout="row" layout-xs="column" layout-align="space-between center">
+        <div class="" layout="row" flex="30" flex-xs="auto">
+            <i style="margin-top:25px" class="material-icons md-primary">search</i>
+            <md-input-container class="md-block" flex="auto">
+                <label>Search(by name or gener)</label>
+                <input ng-change="$ctrl.searchMovies()" ng-model="$ctrl.search">
+            </md-input-container>
+        </div>
+
+        <md-select flex="20" ng-change = "$ctrl.sortBy()" ng-model="$ctrl.sortByValue" placeholder="SortBy" >
+          <md-option value="budgetasc">Budget(Asc)</md-option>
+          <md-option value="budgetdsc">Budget(Dsc)</md-option>
+          <md-option value="yearasc">Year(Asc)</md-option>
+          <md-option value="yeardsc">Year(Dsc)</md-option>
+          <md-option value="nameasc">Name(Asc)</md-option>
+          <md-option value="namedsc">Name(Dsc)</md-option>
+        </md-select>
+     </div>
+
+    <div class="" layout="row" layout-align="center center" layout-wrap>
+        <div class="card md-whiteframe-3dp" ng-repeat="movie in $ctrl.movies" layout="row" flex-lg="45" flex-md="33" flex-sm="50" flex-xs="100">
+            <div class="" flex layout="column">
+                <div class="" layout="row" layout-align="center center">
+                    <a target="_blank" ng-href="{{movie.movie_imdb_link}}">
+                    <h2 class="title">{{movie.movie_title}} ({{movie.title_year}})</h2>
+                </a>
+                </div>
+                <md-divider>
+                </md-divider>
+                <div class="" layout="row">
+                    <div class="">
+                        <img class="imdb-image" src="images/imdb2.png" alt="">
+                    </div>
+                    <div class="" layout="column">
+                        <p style="margin:10px 5px 0px 10px" id="country"><span class="bold">Country : </span>{{movie.country}}</p>
+                        <p style="margin:10px 5px 0px 10px"><span class="bold">Language : </span>{{movie.language}}</p>
+                        <p style="margin:10px 5px 0px 10px"><span class="bold">Director : </span>{{movie.director_name}}</p>
+                        <p style="margin:10px 5px 0px 10px"><span class="bold">Actor : </span>{{movie.actor_1_name}} , {{movie.actor_2_name}}</p>
+                    </div>
+                </div>
+                <md-divider></md-divider>
+                <div class="" layout="row" layout-align="space-between center">
+                    <p flex="65" style=" word-wrap: break-word;"><span class="bold">Geners : </span>{{movie.genres}}</p>
+                    <p flex="35"><span class="bold">Budget : USD </span>{{movie.budget}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+  <cl-paging style="margin-bottom:30px;" flex cl-pages="$ctrl.paging.total" , cl-steps="6" , cl-page-changed="$ctrl.paging.onPageChanged()" , cl-align="center center" , cl-current-page="$ctrl.paging.current"></cl-paging></div>

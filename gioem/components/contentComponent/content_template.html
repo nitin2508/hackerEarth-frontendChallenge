@@ -1,0 +1,68 @@
+<div class="">
+    <div ng-hide="$ctrl.showCard" layout-gt-sm="row" layout-align="start center">
+        <md-select style="margin-top:3px" flex="50" ng-change="$ctrl.sortBy()" ng-model="$ctrl.sortByValue" placeholder="SortBy">
+            <md-option value="dateAsc">EndData(Asc)</md-option>
+            <md-option value="DateDesc">EndDate(Dsc)</md-option>
+        </md-select>
+        <md-autocomplete flex md-input-name="autocompleteField" md-input-minlength="1" md-input-maxlength="18" md-selected-item="$ctrl.selectedItem" md-search-text="$ctrl.searchText" md-items="item in $ctrl.querySearch($ctrl.searchText)" md-item-text="item.display"
+            md-floating-label="Search">
+            <md-item-template>
+                <span md-highlight-text="$ctrl.searchText">{{item}}</span>
+            </md-item-template>
+        </md-autocomplete>
+    </div>
+    <div layout="row" ng-hide="$ctrl.showCard" layout-align="center center" layout-wrap >
+        <md-card flex="30" flex-sm="45" flex-xs="100" ng-repeat="data in $ctrl.data|filter:$ctrl.searchText" md-theme-watch>
+            <md-card-title id="project{{data['s.no']}}">
+                <md-card-title-text layout="row" layout-align="start center">
+                    <div flex class="">
+                        <a class="link" target="_blank" href={{data.url}}>
+                            <div flex class="md-headline">{{data.title}}</div>
+                        </a>
+                        <div class="md-subhead">Pleadge : {{data["amt.pledged"]}} {{data.currency}}</div>
+                        <div class="md-subhead">End Date : {{data["end.time"]| date:'medium'}}</div>
+                        <div class="md-subhead">Backers : {{data["num.backers"]}}</div>
+                    </div>
+                    <div class="">
+                        <md-button ng-click="$ctrl.showDescription(data,$index)" class="md-icon-button" aria-label="More">
+                            <i class="material-icons">&#xE5C8;</i>
+                            <md-tooltip>Show Description</md-tooltip>
+                        </md-button>
+                    </div>
+                </md-card-title-text>
+            </md-card-title>
+        </md-card>
+    </div>
+    <div ng-show="$ctrl.showCard" class="" layout="row" layout-align="center center">
+        <md-card>
+            <md-card-title layout="row">
+                <md-button ng-click="$ctrl.showList($ctrl.descriptionData)" class="md-icon-button" aria-label="More">
+                    <i class="material-icons">&#xE5C4;</i>
+                </md-button>
+                <md-card-title-text layout-align="center center">
+                    <a class="link" target="_blank" href={{$ctrl.descriptionData.url}}>
+                        <span class="md-headline">{{$ctrl.descriptionData.title}}</span>
+                    </a>
+                </md-card-title-text>
+            </md-card-title>
+            <md-card-content>
+                <p>{{$ctrl.descriptionData.blurb}}</p>
+                <div layout="row" layout-align="space-between center" class="">
+                    <div>
+                        <p>Country : {{$ctrl.descriptionData.country}}</p>
+                        <p>State : {{$ctrl.descriptionData.state}}</p>
+                        <p>Location : {{$ctrl.descriptionData.location}}</p>
+                        <p>Type : {{$ctrl.descriptionData.type}}</p>
+                    </div>
+                    <div>
+                        <p>By : {{$ctrl.descriptionData.by}}</p>
+                        <p>Amount : {{$ctrl.descriptionData["amt.pledged"]}} {{$ctrl.descriptionData.currency}}</p>
+                        <p>Percentage Funded : {{$ctrl.descriptionData["percentage.funded"]}}%</p>
+                        <p>Backers : {{$ctrl.descriptionData["num.backers"]}}</p>
+                    </div>
+                </div>
+
+            </md-card-content>
+        </md-card>
+    </div>
+</div>

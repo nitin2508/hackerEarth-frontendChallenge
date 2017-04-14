@@ -1,0 +1,17 @@
+{
+  "name": "latitude",
+  "description": "",
+  "main": "",
+  "authors": [
+    "nitin <25nitin.nagar@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

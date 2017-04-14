@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>OnePush</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+     <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <img alt="Brand" src="images/molecule.png">
+                </a>
+                <div id="tagline">
+                    <p>OnePush<span id="subtagline" class="hidden-xs"> &#8212;
+   finding the best online website!</span></p> 
+                </div>
+            </div>
+            <div id="loader" class="navbar-right">
+                <img src="./images/rolling.gif">
+            </div>
+            <div class="navbar-text navbar-right" id="tagline2">
+                <h4>We've found <span id="totalwebsite"></span> personal web portfolio!</h4>
+            </div>
+        </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-6">
+                        <input type="text" class="form-control" id="search" placeholder="search (by title,URL or tag) " name="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="tiles-container">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div id="form" class="panel panel-default">
+                    <div class="panel-body">
+                        <h2>Contribute / Add website</h2>
+                        <form data-toggle="validator" role="form">
+                            <div class="form-group">
+                                <input type="text" id="title" required="true" class="form-control" placeholder="Title" name="">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="url" class="form-control" required="true" placeholder="Web/url address" name="">
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <input class="form-control" id="tag" required="true" type="text" placeholder="Tag" name="">
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <input class="form-control" id="push-button" type="submit" value="+ Push website" name="">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script id="tile-template" type="text/x-handlebars-template">
+        <div  class="media tile">
+            <div class="media-left media-middle">
+                <a href="#">
+                    <img class="media-object" src="{{favicon_image}}" height="64" width="64">
+                </a>
+            </div>
+            <div class="media-body tile-body">
+                <h4 class="media-heading tile-heading">{{title}}</h4>
+                <div class="row">
+                <div class="col-md-3">
+                    <span class="glyphicon glyphicon-tag"> </span> {{tag}}
+                </div>
+                <div class="col-md-7">
+                    <span class="hidden-xs">| </span><span class="glyphicon glyphicon-link"></span><a href="{{url_address}}" style="word-break: break-all;" target="_blank"> {{url_address}}</a>
+                </div >
+                <div class="col-md-2">  
+                  <span class="hidden-xs">| </span><span id="{{id}}" class="glyphicon glyphicon-thumbs-up like"> {{like}}</span></div>
+                </div>
+            </div>
+        </div>
+    </script>
+    <script src="javascript/jquery-3.1.0.min.js"></script>
+    <script src="javascript/bootstrap.min.js"></script>
+    <script src="javascript/handlebars.js"></script>
+    <script src="javascript/script.js"></script>
+</body>
+
+</html>

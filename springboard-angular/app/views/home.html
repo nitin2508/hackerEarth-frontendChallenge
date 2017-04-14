@@ -1,0 +1,82 @@
+<div class="container-fluid" ng-controller="IndexController">
+    <div class="row">
+        <div class="col-md-2 col-md-offset-1" id="radioform">
+            <div class="row">
+                <div class="col-xs-1">
+                    <i class="fa fa-sort-alpha-asc fa-2x "></i>
+                </div>
+                <div class="col-xs-7">
+                    <p>Sort By</p>
+                </div>
+                <div class="col-md-3">
+                    <button type="button" ng-click="clearSort()" class="btn btn-xs btn-primary pull-right">clear</button>
+                </div>
+            </div>
+
+            <form>
+                <div class="form-group">
+                    <input type="radio" name="" ng-model="sortBy" value="upvote">Vote(up)
+                </div>
+                <div class="form-group">
+                    <input type="radio" name="" ng-model="sortBy" value="downvote">Vote(down)
+                </div>
+                <div class="form-group">
+                    <input type="radio" name="" ng-model="sortBy" value="learner">Learners
+                </div>
+                <div class="form-group">
+                    <input type="radio" name="" ng-model="sortBy" value="hours_int">Duration
+                </div>
+            </form>
+            <h4>Total up votes <span>{{totalVotes.upvotes}}</span></h4>
+        </div>
+
+        <div class="col-md-8">
+            <div class="row">
+                <div class="col-md-6">
+                    <input type="text" class="form-control " ng-model="search.tags" id="search" placeholder="search (by tag) " name="">
+                    <p>Result : {{filtered.length}} courses found.</p>
+                </div>
+
+            </div>
+            <!-- Course List Start   -->
+            <div class="row" ng-repeat="course in courses |filter:search |orderBy:sortBy as filtered">
+                <div class="col-md-12">
+                    <div id="tile" class="media tile">
+
+                        <div class="row">
+                            <div class="col-md-2">
+
+                                <img class="img-responsive courseimage" src={{course.image}}>
+                            </div>
+
+                            <div class="col-md-10">
+                                <h3 class="heading">{{course.name}}</h3>
+                                <div class="features">
+                                    <span class="glyphicon glyphicon-tag"> </span> {{course.tags}} 
+                                </div>
+                                <div  class="pull-left votes">
+                                    <span class="glyphicon glyphicon-triangle-top" ng-click="upvote(course)"></span>{{course.upvote}}
+                                    <br>
+                                    <span class="glyphicon glyphicon-triangle-bottom" ng-click="downvote(course)"></span>{{course.downvote}}
+                                </div>
+                                <div  class="pull-right learner">
+                                    <span class="glyphicon glyphicon-user"></span>{{course.learner}}
+                                    <br>
+                                    <span class="glyphicon glyphicon-time"></span>{{course.hours}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="well">{{course.description}}</div>
+                                <div class="pull-right curriculam">
+                                    <a href={{course.sign_up}} target="_blank"><span class="glyphicon glyphicon-link"></span> View Curriculum  </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

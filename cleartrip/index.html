@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Cleartrip</title>
+<link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="header">
+            <img src="./images/news.png" alt="" id="titleIcon">
+            <p id="title">Hacker News</p>
+            <p id="sub-title">Best Hacker News Article</p>
+        </div>
+        <div class="container">
+            <div class="search-sort">
+                <div class="search">
+                    <input type="text" onkeyup="App.search()" placeholder="Search by(author)" id="search-input" name="" value="">
+                </div>
+                <div class="sort">
+                    <img src="./images/1.png" id="sort-icon" alt="">
+                    <div style="display:-webkit-inline-box;" class="">
+                        <p>Sort BY(number of points)</p>
+                        <div class="">
+                            <img src="./images/down.png" onclick="App.sort('ascending')" class="filter-icon" alt="">
+                            <img src="./images/up.png" onclick="App.sort('descending')" class="filter-icon" alt="">
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+<!---/ HEADLINES -->
+
+            <div id="headlines">
+
+            </div>
+            <!---/HEADLINES END -->
+        </div>
+
+        <script>
+         var App = {};
+        </script>
+
+
+        <script type="text/javascript" src="./javascript/httpcall.js"></script>
+        <script type="text/javascript" src="./javascript/db.js"></script>
+<script type="text/javascript" src="./javascript/app.js">  </script>
+    </body>
+</html>

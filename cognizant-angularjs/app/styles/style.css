@@ -1,0 +1,125 @@
+    body {
+        background: url(../images/background.png);
+    }
+    
+    #tagline {
+        display: inline-block;
+        font-size: 40px;
+        color: green;
+        margin: 20px 5px 5px 20px;
+    }
+    
+    #subtagline2 {
+        font-size: 20px;
+        font-weight: none;
+        color: darkgray;
+    }
+    
+    #radioform {
+        background-color: none;
+        margin-top: 50px;
+    }
+    
+    #radioform div p {
+        font-size: 20px;
+        text-align: center;
+        color: #858585;
+        margin: 0px;
+        font-weight: bold;
+    }
+    
+    .form-group {
+        font-size: 17px;
+        color: #858585;
+    }
+    
+    #sortby {
+        font-size: 30px;
+        text-align: center;
+    }
+    
+    #statics {
+        margin-top: 20px;
+    }
+    
+    #search input {
+        height: 20px;
+        border: 5px solid #cfcfd5;
+    }
+    
+    .tile {
+        background-color: white;
+        border: 3px solid #cfcfd5;
+        font-size: 16px;
+        border-radius: 10px;
+        padding: 10px;
+    }
+    
+    #search {
+        margin-bottom: 10px;
+        height: 40px;
+        border: 3px solid #cfcfd5;
+        border-radius: 10px;
+    }
+    
+    .metaData {
+        border: 1px solid #cfcfd5;
+        font-size: 16px;
+        line-height: 1;
+        position: relative;
+        margin-top: 5px;
+    }
+    
+    .status {
+        position: absolute;
+        right: 0px;
+    }
+    
+    .code {
+        overflow: auto;
+        height: 200px;
+    }
+    
+    .title {
+        color: #50b3ac;
+        font-size: 25px;
+        margin-left: 8px;
+    }
+    
+    pre {
+        border: 0px;
+    }
+    
+    .filterHeading {
+        border: 2px solid #50b3ac;
+        border-radius: 15px;
+        margin: 0px;
+    }
+    
+    #filterGroup {
+        margin-top: 15px;
+        border: 2px solid grey;
+    }
+    
+    .form-group {
+        margin: 4px 4px 4px 6px;
+        color: black;
+    }
+    
+    #statics li {
+        font-size: 17px;
+        font-weight: bold;
+    }
+    
+    .btn {
+        background-color: white;
+    }
+    
+    .number {
+        font-weight: normal;
+    }
+    
+    .stats {
+        margin-top: 15px;
+        border: 2px solid grey;
+    }

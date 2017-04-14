@@ -1,0 +1,53 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2 sorting">
+            <h2 class="sort">Sort By</h2>
+            <input type="radio" name="category" ng-model='radio' value="category">Category<br>
+            <input type="radio" name="price" ng-model='radio' value="price">Price
+
+            <div>
+                <h2 class="sort">Price</h2>
+                <rzslider rz-slider-model="slider.minValue" rz-slider-high="slider.maxValue" rz-slider-options="slider.options"></rzslider>
+            </div>
+        </div>
+        <div class="col-md-10">
+            <div class="row">
+                <div class="col-md-5 col-md-offset-7">
+                    <input id="search" ng-model="search" type="text" class="form-control" placeholder="search(by name or category)">
+                </div>
+            </div>
+
+            <div ng-class="row">
+
+                <div ng-repeat="item in items|orderBy:radio|filter:priceFilter|filter:searchFilter">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="thumbnail ">
+                            <img class="product-image " src="{{item.image}} ">
+                            <div class="caption ">
+                                <h4>{{item.name}}</h4>
+                                <div class="row ">
+                                    <div class="col-md-7 ">
+                                        <div class="category "><span class="glyphicon glyphicon-tags "></span>{{item.category_name}}</div>
+                                        <div>
+                                            <p style="background-color:{{item.color}}" class="color"></p> 
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-5 ">
+                                        <div class="price ">{{item.price|currency:'&#8377'}}</div>
+                                        <div class="category "><span class="glyphicon glyphicon-scale "></span>{{item.quantity}} pcs</div>
+
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="description ">{{item.description}}</p>
+                                </div>
+                                <div star-rating rating-value="round(item.rating) " max=5></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

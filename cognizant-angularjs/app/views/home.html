@@ -1,0 +1,100 @@
+<div class="container" ng-controller="IndexController">
+    <div class="row">
+        <div class="col-md-3 col-md-push-9" id="radioform">
+            <div>
+                <div class="row filterHeading">
+                    <div class="col-xs-1">
+                        <i class="fa fa-filter fa-2x "></i>
+                    </div>
+                    <div class="col-xs-10">
+                        <p>Filter By Status</p>
+                    </div>
+                </div>
+
+                <div id="filterGroup">
+                    <div class="form-group">
+                        <input type="checkbox" name="Accepted" ng-model="filterByStatus.accepted" value="compiler_status">Accepted
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" name="Skipped" ng-model="filterByStatus.skipped" value="Skipped">Skipped
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" name="Memory" ng-model="filterByStatus.timeLimit" value="Time limit">Memory/Time limit exceeded
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" name="Runtime" ng-model="filterByStatus.runtime" value="Runtime error">Runtime/Compilation error
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" name="Wrong" ng-model="filterByStatus.wronganswer" value="Wrong answer">Wrong answer
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="statics">
+                <div class="row filterHeading">
+                    <div class="col-xs-1">
+                        <i class="fa fa-bar-chart fa-2x "></i>
+                    </div>
+                    <div class="col-xs-10">
+                        <p>Statical Analysis</p>
+                    </div>
+                </div>
+                <div class="stats">
+                    <ul>
+                        <li>Top 5 Languages Used
+                            <ul>
+                                <li ng-repeat=" item in filterStats.top5Language ">
+                                    {{item.key}}:<span class="number ">{{item.value}}</span>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>Top 2 Submissionn attemped
+                            <ul>
+                                <li ng-repeat="item in filterStats.top2Submission ">
+                                    <span class="number ">{{item.key}}:{{item.value}}</span>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>Total Submissions:<span class="number ">{{filterStats.totalSubmission}}</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9 col-md-pull-3 ">
+            <div class="row ">
+                <div class="col-md-6 ">
+                    <input type="text " class="form-control " ng-model="search " id="search " placeholder="search " name=" ">
+                </div>
+
+            </div>
+            <!-- Course List Start   -->
+            <div class="row " dir-paginate="item in websites|filter:search|custom:filterByStatus | itemsPerPage: 5 ">
+                <div class="col-md-12 ">
+                    <div class="media tile ">
+                        <img src={{item.image}} alt="java " height=50px width=50px><span class="title ">{{item.title}}</span>
+                        <div class="metaData ">
+                            <div class="btn-group status " role="group " aria-label="... ">
+                                <button type="button " class="btn btn-default ">{{item.compiler_status}}</button>
+                                <button type="button " class="btn btn-default ">{{item.language}}</button>
+                            </div>
+                            <div class="code ">
+                                <div hljs hljs-source=item.source_code>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-md-6 col-md-offset-6 ">
+                    <div class="pull-right ">
+                        <dir-pagination-controls></dir-pagination-controls>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
