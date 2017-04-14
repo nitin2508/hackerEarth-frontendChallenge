@@ -1,0 +1,908 @@
+
+<!-- saved from url=(0122)https://www.hackerearth.com/treebo-hotels-full-stack-developer-hiring-challenge/problems/1cede1e2e5f045b184dcf830be314f3b/ -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css" media="screen">.uv-icon{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;display:inline-block;cursor:pointer;position:relative;-moz-transition:all 300ms;-o-transition:all 300ms;-webkit-transition:all 300ms;transition:all 300ms;width:39px;height:39px;position:fixed;z-index:100002;opacity:0.8;-moz-transition:opacity 100ms;-o-transition:opacity 100ms;-webkit-transition:opacity 100ms;transition:opacity 100ms}.uv-icon.uv-bottom-right{bottom:10px;right:12px}.uv-icon.uv-top-right{top:10px;right:12px}.uv-icon.uv-bottom-left{bottom:10px;left:12px}.uv-icon.uv-top-left{top:10px;left:12px}.uv-icon.uv-is-selected{opacity:1}.uv-icon svg{width:39px;height:39px}.uv-popover{font-family:sans-serif;font-weight:100;font-size:13px;color:black;position:fixed;z-index:100001}.uv-popover-content{-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;background:white;position:relative;width:325px;height:325px;-moz-transition:background 200ms;-o-transition:background 200ms;-webkit-transition:background 200ms;transition:background 200ms}.uv-bottom .uv-popover-content{-moz-box-shadow:rgba(0,0,0,0.3) 0 -10px 60px,rgba(0,0,0,0.1) 0 0 20px;-webkit-box-shadow:rgba(0,0,0,0.3) 0 -10px 60px,rgba(0,0,0,0.1) 0 0 20px;box-shadow:rgba(0,0,0,0.3) 0 -10px 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-top .uv-popover-content{-moz-box-shadow:rgba(0,0,0,0.3) 0 10px 60px,rgba(0,0,0,0.1) 0 0 20px;-webkit-box-shadow:rgba(0,0,0,0.3) 0 10px 60px,rgba(0,0,0,0.1) 0 0 20px;box-shadow:rgba(0,0,0,0.3) 0 10px 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-left .uv-popover-content{-moz-box-shadow:rgba(0,0,0,0.3) 10px 0 60px,rgba(0,0,0,0.1) 0 0 20px;-webkit-box-shadow:rgba(0,0,0,0.3) 10px 0 60px,rgba(0,0,0,0.1) 0 0 20px;box-shadow:rgba(0,0,0,0.3) 10px 0 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-right .uv-popover-content{-moz-box-shadow:rgba(0,0,0,0.3) -10px 0 60px,rgba(0,0,0,0.1) 0 0 20px;-webkit-box-shadow:rgba(0,0,0,0.3) -10px 0 60px,rgba(0,0,0,0.1) 0 0 20px;box-shadow:rgba(0,0,0,0.3) -10px 0 60px,rgba(0,0,0,0.1) 0 0 20px}.uv-ie8 .uv-popover-content{position:relative}.uv-ie8 .uv-popover-content .uv-popover-content-shadow{display:block;background:black;content:'';position:absolute;left:-15px;top:-15px;width:100%;height:100%;filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius=15,MakeShadow=true,ShadowOpacity=0.30);z-index:-1}.uv-popover-tail{border:9px solid transparent;width:0;z-index:10;position:absolute;-moz-transition:border-top-color 200ms;-o-transition:border-top-color 200ms;-webkit-transition:border-top-color 200ms;transition:border-top-color 200ms}.uv-top .uv-popover-tail{bottom:-20px;border-top:11px solid white}.uv-bottom .uv-popover-tail{top:-20px;border-bottom:11px solid white}.uv-left .uv-popover-tail{right:-20px;border-left:11px solid white}.uv-right .uv-popover-tail{left:-20px;border-right:11px solid white}.uv-popover-loading{background:white;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;position:absolute;width:100%;height:100%;left:0;top:0}.uv-popover-loading-text{position:absolute;top:50%;margin-top:-0.5em;width:100%;text-align:center}.uv-popover-iframe-container{height:100%}.uv-popover-iframe{-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;overflow:hidden}.uv-is-hidden{display:none}.uv-is-invisible{display:block !important;visibility:hidden !important}.uv-is-transitioning{display:block !important}.uv-no-transition{-moz-transition:none !important;-webkit-transition:none !important;-o-transition:color 0 ease-in !important;transition:none !important}.uv-fade{opacity:1;-moz-transition:opacity 200ms ease-out;-o-transition:opacity 200ms ease-out;-webkit-transition:opacity 200ms ease-out;transition:opacity 200ms ease-out}.uv-fade.uv-is-hidden{opacity:0}.uv-scale-top,.uv-scale-top-left,.uv-scale-top-right,.uv-scale-bottom,.uv-scale-bottom-left,.uv-scale-bottom-right,.uv-scale-right,.uv-scale-right-top,.uv-scale-right-bottom,.uv-scale-left,.uv-scale-left-top,.uv-scale-left-bottom,.uv-slide-top,.uv-slide-bottom,.uv-slide-left,.uv-slide-right{opacity:1;-moz-transition:all 80ms ease-out;-o-transition:all 80ms ease-out;-webkit-transition:all 80ms ease-out;transition:all 80ms ease-out}.uv-scale-top.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateY(-15%);-ms-transform:scale(0.8) translateY(-15%);-webkit-transform:scale(0.8) translateY(-15%);transform:scale(0.8) translateY(-15%)}.uv-scale-top-left.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateY(-15%) translateX(-10%);-ms-transform:scale(0.8) translateY(-15%) translateX(-10%);-webkit-transform:scale(0.8) translateY(-15%) translateX(-10%);transform:scale(0.8) translateY(-15%) translateX(-10%)}.uv-scale-top-right.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateY(-15%) translateX(10%);-ms-transform:scale(0.8) translateY(-15%) translateX(10%);-webkit-transform:scale(0.8) translateY(-15%) translateX(10%);transform:scale(0.8) translateY(-15%) translateX(10%)}.uv-scale-bottom.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateY(15%);-ms-transform:scale(0.8) translateY(15%);-webkit-transform:scale(0.8) translateY(15%);transform:scale(0.8) translateY(15%)}.uv-scale-bottom-left.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateY(15%) translateX(-10%);-ms-transform:scale(0.8) translateY(15%) translateX(-10%);-webkit-transform:scale(0.8) translateY(15%) translateX(-10%);transform:scale(0.8) translateY(15%) translateX(-10%)}.uv-scale-bottom-right.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateY(15%) translateX(10%);-ms-transform:scale(0.8) translateY(15%) translateX(10%);-webkit-transform:scale(0.8) translateY(15%) translateX(10%);transform:scale(0.8) translateY(15%) translateX(10%)}.uv-scale-right.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateX(15%);-ms-transform:scale(0.8) translateX(15%);-webkit-transform:scale(0.8) translateX(15%);transform:scale(0.8) translateX(15%)}.uv-scale-right-top.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateX(15%) translateY(-10%);-ms-transform:scale(0.8) translateX(15%) translateY(-10%);-webkit-transform:scale(0.8) translateX(15%) translateY(-10%);transform:scale(0.8) translateX(15%) translateY(-10%)}.uv-scale-right-bottom.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateX(15%) translateY(10%);-ms-transform:scale(0.8) translateX(15%) translateY(10%);-webkit-transform:scale(0.8) translateX(15%) translateY(10%);transform:scale(0.8) translateX(15%) translateY(10%)}.uv-scale-left.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateX(-15%);-ms-transform:scale(0.8) translateX(-15%);-webkit-transform:scale(0.8) translateX(-15%);transform:scale(0.8) translateX(-15%)}.uv-scale-left-top.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateX(-15%) translateY(-10%);-ms-transform:scale(0.8) translateX(-15%) translateY(-10%);-webkit-transform:scale(0.8) translateX(-15%) translateY(-10%);transform:scale(0.8) translateX(-15%) translateY(-10%)}.uv-scale-left-bottom.uv-is-hidden{opacity:0;-moz-transform:scale(0.8) translateX(-15%) translateY(10%);-ms-transform:scale(0.8) translateX(-15%) translateY(10%);-webkit-transform:scale(0.8) translateX(-15%) translateY(10%);transform:scale(0.8) translateX(-15%) translateY(10%)}.uv-slide-top.uv-is-hidden{-moz-transform:translateY(-100%);-ms-transform:translateY(-100%);-webkit-transform:translateY(-100%);transform:translateY(-100%)}.uv-slide-bottom.uv-is-hidden{-moz-transform:translateY(100%);-ms-transform:translateY(100%);-webkit-transform:translateY(100%);transform:translateY(100%)}.uv-slide-left.uv-is-hidden{-moz-transform:translateX(-100%);-ms-transform:translateX(-100%);-webkit-transform:translateX(-100%);transform:translateX(-100%)}.uv-slide-right.uv-is-hidden{-moz-transform:translateX(100%);-ms-transform:translateX(100%);-webkit-transform:translateX(100%);transform:translateX(100%)}
+</style><style type="text/css" media="screen">.uv-icon:hover{opacity:1}</style><style type="text/css" media="print">#uvTab,.uv-tray,.uv-icon,.uv-popover,.uv-bubble{display:none!important}</style><script type="application/javascript" async="" defer="" src="./Problems - Treebo Hotels Full Stack Developer Hiring Challenge_files/track.js"></script><script src="./Problems - Treebo Hotels Full Stack Developer Hiring Challenge_files/55ba39a81acd32ac7d0002d4.js" async=""></script><script type="text/javascript" src="chrome-extension://aadgmnobpdmgmigaicncghmmoeflnamj/ng-inspector.js"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head><body><div id="MathJax_Message" style="display: none;"></div>DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;
+
+
+
+
+  
+    
+    <meta name="description" content="HackerEarth Online Test">
+    <link rel="canonical" href="https://www.hackerearth.com/treebo-hotels-full-stack-developer-hiring-challenge/problems/">
+    <meta name="msvalidate.01" content="1BF418E510B5A17A2D71685C571BF4EB">
+
+    
+    <meta name="google-site-verification" content="ozqyeStBcz4eehbY9Ohb_IUQcA4y8BKzzDCT-H1QPPc">
+
+    <title>Problems - Treebo Hotels Full Stack Developer Hiring Challenge</title>
+
+    
+    <link rel="shortcut icon" type="image/x-icon" href="https://hackerearth.global.ssl.fastly.net/static/hackerearth/images/logo/HE_identity.png">
+
+    
+    <link rel="stylesheet" href="./Problems - Treebo Hotels Full Stack Developer Hiring Challenge_files/base_common_combined.css">
+    <link rel="stylesheet" href="./Problems - Treebo Hotels Full Stack Developer Hiring Challenge_files/tipTip.css">
+    <link rel="stylesheet" href="./Problems - Treebo Hotels Full Stack Developer Hiring Challenge_files/offline-theme-slide.css">
+    <link rel="stylesheet" href="./Problems - Treebo Hotels Full Stack Developer Hiring Challenge_files/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./Problems - Treebo Hotels Full Stack Developer Hiring Challenge_files/css">
+    <link rel="stylesheet" href="./Problems - Treebo Hotels Full Stack Developer Hiring Challenge_files/base_candidate.0.1.css">
+
+    
+    
+<link rel="stylesheet" href="./Problems - Treebo Hotels Full Stack Developer Hiring Challenge_files/event.css">
+<link rel="stylesheet" href="./Problems - Treebo Hotels Full Stack Developer Hiring Challenge_files/problems_new.css">
+<link rel="stylesheet" href="./Problems - Treebo Hotels Full Stack Developer Hiring Challenge_files/editor1.css">
+<link href="./Problems - Treebo Hotels Full Stack Developer Hiring Challenge_files/jquery-ui-1.8.21.custom.css" media="screen" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="./Problems - Treebo Hotels Full Stack Developer Hiring Challenge_files/pagedown.css">
+<link href="./Problems - Treebo Hotels Full Stack Developer Hiring Challenge_files/prettify.css" type="text/css" rel="stylesheet">
+<link rel="stylesheet" href="./Problems - Treebo Hotels Full Stack Developer Hiring Challenge_files/custom-jquery.joyride-2.1.css">
+
+
+
+  
+
+  
+    
+    <script type="text/javascript" async="" src="./Problems - Treebo Hotels Full Stack Developer Hiring Challenge_files/recaptcha__en.js"></script><script type="text/javascript" async="" src="./Problems - Treebo Hotels Full Stack Developer Hiring Challenge_files/5F90ycbP4JOg1fOUoELScA.js"></script><script type="text/javascript" async="" src="./Problems - Treebo Hotels Full Stack Developer Hiring Challenge_files/mixpanel-2.2.min.js"></script><script async="" src="./Problems - Treebo Hotels Full Stack Developer Hiring Challenge_files/analytics.js"></script><script type="text/javascript">
+      navigator.sayswho= (function(){
+        var ua= navigator.userAgent,
+          N= navigator.appName, tem,
+          M= ua.match(/(opera|chrome|safari|firefox|msie|trident)\/?\s*([\d\.]+)/i) || [];
+        M= M[2]? [M[1], M[2]]:[N, navigator.appVersion, '-?'];
+        if(M && (tem= ua.match(/version\/([\.\d]+)/i))!= null) M[2]= tem[1];
+        return M.join(' ');
+      })();
+
+      var browser = navigator.sayswho;
+      var parts = browser.split(" ");
+      browser = parts[0].toLowerCase();
+      version = parts[1];
+      var version_parts = version.split(".");
+      version = parseInt(version_parts[0]);
+
+      if ((browser == 'chrome' && version < 11) || (browser == 'firefox' && version < 10) || (browser == 'msie' && version < 10)) {
+        window.location.href = "/browser-not-supported/";
+      }
+    </script>
+
+    
+    <div id="alert-message-holder">
+      
+
+      
+      
+    <div class="alert-message hidden">
+        <div class="message float-left"></div>
+        <div class="cross-holder float-left"><span class="small-cross sprites"></span></div>
+        <div class="clear"></div>
+      </div></div>
+    
+
+    
+    <div class="header">
+      <div class="float-left box-padding-20">
+        
+        
+        <div class="company-logo-header">
+          <img alt="HackerEarth" height="30" width="30" src="./Problems - Treebo Hotels Full Stack Developer Hiring Challenge_files/HE_identity_white.png">
+        </div>
+        
+
+
+        <div class="header-name ellipsis">Treebo Hotels Full Stack Developer Hiring Challenge</div>
+
+        
+        <div class="clear"></div>
+      </div>
+      <div class="float-right box-padding-20">
+        
+        <div class="test-information show-modal" target="instructions-modal"><i class="fa fa-info-circle"></i> </div>
+        <div class="user-name float-left"> 25nitin.nagar@gmail.com</div>
+        
+
+        
+
+<div class="timer" time="43200" started="true" end-test="/AJAX/treebo-hotels-full-stack-developer-hiring-challenge/time-completed/" test-completed="/treebo-hotels-full-stack-developer-hiring-challenge/mark-completed/">
+  <div class="time-widget">
+  <div id="hours">11</div>
+  <div class="colon">:</div>
+
+  <div id="mins">45</div>
+  <div class="colon">:</div>
+
+  <div id="secs">01</div>
+  <div class="light less-margin-left">left</div>
+
+  <div class="clear"></div>
+  </div>
+</div>
+<a href="https://www.hackerearth.com/treebo-hotels-full-stack-developer-hiring-challenge/problems/1cede1e2e5f045b184dcf830be314f3b/#" class="end-test button btn-red ajax-modal" ajax="/AJAX/end_test_modal/18029/" target="end-test-modal">End Test</a>
+<div id="end-test-modal" class="modal-window small-modal fix-modal-top hidden"></div>
+<div class="clear"></div>
+
+      </div>
+      <div class="clear"></div>
+
+    </div>
+    
+
+    
+    <div class="body">
+      
+<div class="view-body-overlay hidden"></div>
+<div class="view-body ">
+  <div id="left-pane-question-list" class="left-pane">
+    <div class="left-pane-header dark large weight-700">
+      <div class="float-left">1 Questions</div>
+      <div class="float-right">
+        <div class="inline-block medium-margin-right">Max. Marks: 100.0</div>
+      </div>
+      <div class="clear"></div>
+    </div> <!-- /left-pane-header -->
+    <hr class="hr">
+
+    <div class="left-pane-content">
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+      <div class="left-pane-content section file">
+        <div class="left-pane-content section-header">
+          <div class="float-left weight-700 large weight-700 section-header-text">1 File Upload Question</div>
+          <div class="clear"></div>
+        </div>
+        <div class="left-pane-content section-content">
+          
+            <div id="1cede1e2e5f045b184dcf830be314f3b" class="question-item load-section history file-flow selected" targets="1" target1="problem-detail" ajax-request-method="GET" ajax="/AJAX/file-submission-view/384/f/" level="1" execute="">
+              
+                <div class="status tool-tip" id="status-f384">
+                  <div class="attempted-circle inactive"></div>
+                </div>
+              
+              <div class="serial-no dark weight-700">1</div>
+              <div class="text dark weight-700">Hotel Deals — a simplified hotel searching experience!</div>
+              <div class="clear"></div>
+              <div class="dark smaller less-margin margin-left-30">Max. Marks: 100.0</div>
+            </div>
+            <ol id="file-walkthrough-1cede1e2e5f045b184dcf830be314f3b" class="joyRideTipContent">
+              <li data-id="left-pane-question-list" data-text="Next" class="custom right-pane-joyride-modal" data-options="tipLocation:right;">
+                <p>This is the list of questions.</p>
+                <div class="joyride-skip-tip-content inline-block float-left"><a class="joyride-skip-tip" href="https://www.hackerearth.com/treebo-hotels-full-stack-developer-hiring-challenge/problems/1cede1e2e5f045b184dcf830be314f3b/#" onclick="$(document).joyride(&#39;end&#39;);">Skip Tour</a></div>
+              </li>
+              <li data-class="right-pane" data-text="Next" class="custom right-pane-joyride-modal" data-options="tipLocation:left;">
+                <p>This is a File-Upload question.</p>
+                <div class="joyride-skip-tip-content inline-block float-left"><a class="joyride-skip-tip" href="https://www.hackerearth.com/treebo-hotels-full-stack-developer-hiring-challenge/problems/1cede1e2e5f045b184dcf830be314f3b/#" onclick="$(document).joyride(&#39;end&#39;);">Skip Tour</a></div>
+              </li>
+              <li data-class="problem-statement-1cede1e2e5f045b184dcf830be314f3b" data-text="Next" class="custom" data-options="tipLocation:left;">
+                <p>This is the problem statement. Please read it carefully before answering.</p>
+                <div class="joyride-skip-tip-content inline-block float-left"><a class="joyride-skip-tip" href="https://www.hackerearth.com/treebo-hotels-full-stack-developer-hiring-challenge/problems/1cede1e2e5f045b184dcf830be314f3b/#" onclick="$(document).joyride(&#39;end&#39;);">Skip Tour</a></div>
+              </li>
+              <li data-class="problem-score-1cede1e2e5f045b184dcf830be314f3b" data-text="Next" class="custom" data-options="tipLocation:left;">
+                <p>This is maximum marks that you can score if you solve this problem correctly.</p>
+                <div class="joyride-skip-tip-content inline-block float-left"><a class="joyride-skip-tip" href="https://www.hackerearth.com/treebo-hotels-full-stack-developer-hiring-challenge/problems/1cede1e2e5f045b184dcf830be314f3b/#" onclick="$(document).joyride(&#39;end&#39;);">Skip Tour</a></div>
+              </li>
+              <li data-class="id_upload-1cede1e2e5f045b184dcf830be314f3b" data-text="Next" class="custom" data-options="tipLocation:left;">
+                <p>Upload your file by clicking here.</p>
+                <div class="joyride-skip-tip-content inline-block float-left"><a class="joyride-skip-tip" href="https://www.hackerearth.com/treebo-hotels-full-stack-developer-hiring-challenge/problems/1cede1e2e5f045b184dcf830be314f3b/#" onclick="$(document).joyride(&#39;end&#39;);">Skip Tour</a></div>
+              </li>
+              <li data-class="wmd-panel-1cede1e2e5f045b184dcf830be314f3b" data-text="Next" class="custom" data-options="tipLocation:left;">
+                <p>Specify any instructions or comments about your file that you would like your evaluator to see.</p>
+                <div class="joyride-skip-tip-content inline-block float-left"><a class="joyride-skip-tip" href="https://www.hackerearth.com/treebo-hotels-full-stack-developer-hiring-challenge/problems/1cede1e2e5f045b184dcf830be314f3b/#" onclick="$(document).joyride(&#39;end&#39;);">Skip Tour</a></div>
+              </li>
+              <li data-class="file-submit-answer-1cede1e2e5f045b184dcf830be314f3b" data-text="Finish" class="custom" data-options="tipLocation:top;">
+                <p>Click Submit to complete your submission.</p>
+                <a class="joyride-skip-tip not-visible" href="https://www.hackerearth.com/treebo-hotels-full-stack-developer-hiring-challenge/problems/1cede1e2e5f045b184dcf830be314f3b/#" onclick="$(document).joyride(&#39;end&#39;);">Skip Tour</a>
+              </li>
+            </ol>
+          
+        </div>
+      </div>
+      
+
+      
+
+      
+
+    </div> <!-- /left-pane-content -->
+  </div> <!-- /left-pane -->
+
+  <div class="right-pane transition padding-top-20">
+    <div id="right-pane-question-content" class="right-pane-content">
+      <div id="problem-detail-wrapper" class="problem-detail-wrapper ">
+        <div id="problem-detail" class="problem-detail"><div class="file" data-id="1cede1e2e5f045b184dcf830be314f3b">
+    <div class="weight-700 content-heading less-padding inline-block less-padding-2-right">Question</div>
+    <div class="serial-number content-heading less-padding inline-block">1.</div>
+    <div class="regular dark float-right less-padding inline-block div-width-60">
+        <div class="file-start-flow float-right inline-block padding-left-10 tool-tip" question-id="1cede1e2e5f045b184dcf830be314f3b" '=""><i class="flow-help fa fa-question-circle font-size-16 light"></i></div>
+        <div class="problem-score problem-score-1cede1e2e5f045b184dcf830be314f3b float-right max-marks padding-left-10 padding-right-10 inline-block">Max. Marks 100</div>
+    </div>
+    <div class="clear"></div>
+    <hr class="hr standard-margin-bottom">
+    <div class="problem-statement problem-statement-1cede1e2e5f045b184dcf830be314f3b lineh-21">
+        <div class="regular dark less-padding"><p>| Hotel Deals — a simplified hotel searching experience!</p>
+<p><strong>[Problem Statement]</strong></p>
+<p>Develop a pseudo web application which would let users search and list hotel deals conveniently.</p>
+<p><strong>[Minimum Requirement]</strong> </p>
+<p>— Utilise Data dump (SQL) for details on code submission:</p>
+<ul>
+<li>
+<p>Data Parameters:</p>
+</li>
+<li>
+<p>hotel_deals[] — { id, name, image, rating, link, actual_price, discount, location }</p>
+</li>
+<li>
+<p><strong>name</strong> AS text (name of the challenge)</p>
+</li>
+<li>
+<p><strong>image</strong> AS text (image url of the hotel)</p>
+</li>
+<li>
+<p><strong>rating</strong> AS float (rating of the hotel)</p>
+</li>
+<li>
+<p><strong>link</strong> AS text (link associated with respective hotel)</p>
+</li>
+<li>
+<p><strong>actual_price</strong> AS text (price per day, associated with hotel)</p>
+</li>
+<li>
+<p><strong>discount</strong> AS text (percentage discount on actual_price would given final price)</p>
+</li>
+<li>
+<p><strong>location</strong> AS text (address of respective hotel)</p>
+</li>
+</ul>
+<p>— Minimal design listing hotel details</p>
+<pre class="prettyprint prettyprinted"><code><span class="pun">*</span><span class="pln"> </span><span class="typ">Use</span><span class="pln"> </span><span class="typ">Javascript</span><span class="pun">,</span><span class="pln"> jQuery</span><span class="pun">,</span><span class="pln"> </span><span class="typ">AngularJS</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">or</span><span class="pln"> any of your favourite JS framework to process backend </span><span class="typ">RESTFul</span><span class="pln"> queries</span><span class="pun">.</span></code></pre>
+<p>::Backend</p>
+<p>— <strong>Parse data</strong> dump to your favourite data format.</p>
+<pre class="prettyprint prettyprinted"><code><span class="pun">*</span><span class="pln"> </span><span class="typ">You</span><span class="pln"> are free to </span><span class="kwd">use</span><span class="pln"> any method to store dataset</span><span class="pun">.</span><span class="pln">
+
+</span><span class="pun">*</span><span class="pln"> i</span><span class="pun">.</span><span class="pln">e</span><span class="pun">.:</span><span class="pln">  </span><span class="typ">MySQL</span><span class="pun">/</span><span class="typ">PostgreSQL</span><span class="pun">,</span><span class="pln"> </span><span class="typ">MongoDB</span><span class="pun">,</span><span class="pln"> </span><span class="typ">CouchDB</span><span class="pun">,</span><span class="pln"> redis</span><span class="pun">.</span></code></pre>
+<p>— Emphasis on functional backend RESTful service developed in your favourite backend framework; (i.e. Could be
+Python/Django, Javascript/Node, Java/Servlet or the one which you feels fits the best).</p>
+<p>— Functionally interactive API designed with basic function to retrieve hotel deals data (JSON response).</p>
+<ul>
+<li>
+<p><strong>List</strong> submissions (add paging, 6 results per page)# <strong>/list</strong>?page=<strong>?</strong></p>
+</li>
+<li>
+<p>Implement RESTFul service responding statistical analysis on data (records): <strong>/stats</strong> </p>
+</li>
+<li>
+<p>Response should contains:</p>
+</li>
+</ul>
+<p><img alt="response-image" src="./Problems - Treebo Hotels Full Stack Developer Hiring Challenge_files/Kkb3fpG.png"></p>
+<p><strong>— Submit Screenshots, Source code, Demo URL &amp; Deployment Instructions.</strong></p>
+<p><strong>[Plus Point]</strong> </p>
+<p>— Utilise client-side scripting and UI functionality to enhance design; Use custom design, font and icons to make web-app more user-friendly.</p>
+<p>— Implement <strong>Search</strong> (by name, or location) feature.</p>
+<ul>
+<li>[RESTFul API] Full text search on ‘name’ or <code>location</code> parameter: <strong>/search</strong>?query=<strong>?</strong></li>
+</ul>
+<p>— Awesome if you could manage to <strong>deploy/host</strong> this application somewhere with <strong>Demo URL</strong>! </p>
+<ul>
+<li>
+<p>Cloud Providers (to deploy your application on one of the free environment):</p>
+<ul>
+<li>
+<p><a href="./Problems - Treebo Hotels Full Stack Developer Hiring Challenge_files/021ce93.png">Digital Ocean</a> (use promocode: DROPLET10)</p>
+</li>
+<li>
+<p><a href="./Problems - Treebo Hotels Full Stack Developer Hiring Challenge_files/448bdf2.png">AWS</a> </p>
+</li>
+<li>
+<p>Heroku / Openshift</p>
+</li>
+<li>
+<p>Openshift</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>— Calculate <strong>final_price</strong> (via <strong>%discount</strong> on <strong>actual_price</strong>)</p>
+<p><strong>[Extra Work]</strong> </p>
+<p>— A feature to <strong>Like</strong> hotels and maintain <strong>Total Likes</strong> (via HTML5 Localstorage or WebSQL)</p>
+<p>— Implement <strong>Sort</strong> (by Hotel Rating, Price or Like) feature.</p>
+<ul>
+<li>[RESTFul API] Filter result:   /list?<strong>sortBy</strong>=<strong>?</strong></li>
+</ul>
+<p>— Use your imagination and add features which would make feature rich web app; we always admire creative coding.</p>
+<p>— You may add portfolio comprising awesome work you have done on web applications.</p>
+<p><strong>[Guide]</strong></p>
+<p>— Treebo Hotel Deals Chunk:  <a href="http://hackerearth.0x10.info/dump/treebo_hotels/hotel_deals.sql" target="_blank"> Treebo Hotel Deals - SQL Dump </a></p>
+<p>— Given backend design / API endpoints are priority here; keep UI minimal and emphasis on RESTful services and deployment.</p>
+<p>— You are free to use more robust RESTful URL hierarchy; given structure is to help you kickstart with the development.</p>
+<p>— Ideal Stack: </p>
+<ul>
+<li>
+<p>Backend (if coding): Any of your choice, could be Python/Django, Javascript/Node, Java/Spring, etc.</p>
+</li>
+<li>
+<p>Any JS/jQuery/AngularJS/React/Bootstrap for front-end/UI tweaks.</p>
+</li>
+</ul>
+<p>— PS: Emphasis on <strong>functional App</strong>, <strong>deployment</strong> while building application.</p>
+<ul>
+<li><strong>Note</strong>: <strong>API hits</strong> shows the number of total hits made to the RESTFul endpoints. </li>
+</ul>
+<p>— You may use below resources for misc. things:</p>
+<ul>
+<li>
+<p>http://subtlepatterns.com/thumbnail-view/</p>
+</li>
+<li>
+<p>http://getbootstrap.com/components/</p>
+</li>
+<li>
+<p>http://codebeautify.org/jsonvalidate</p>
+</li>
+</ul>
+<p><strong>[Wireframe MVP / Reference Structure]</strong></p>
+<ul>
+<li>Mockup image with instructions:</li>
+</ul>
+<p><img alt="enter image description here" src="./Problems - Treebo Hotels Full Stack Developer Hiring Challenge_files/021ce93.png"> </p>
+<ul>
+<li>WebApp comprising hotel deal details including various details ; top side contains details on Feature and Stats.</li>
+</ul>
+<p><strong>PS</strong>: focus on Backend part and RESTFul interaction.</p>
+<p><strong>Data structure and Sample Data</strong></p>
+<p><img alt="enter image description here" src="./Problems - Treebo Hotels Full Stack Developer Hiring Challenge_files/448bdf2.png"></p>
+<p><strong>Tl;Dr: Task Flow</strong></p>
+<ol>
+<li>
+<p>Utilise given Data-set to get hotel deal details.</p>
+</li>
+<li>
+<p>Develop RESTful service using backend language (i.e.: /list /stats /search)</p>
+</li>
+<li>
+<p>Code frontend and add UI tweaks given in a problem statement.</p>
+</li>
+<li>
+<p>Deploy application on any of the Cloud platform.</p>
+</li>
+<li>
+<p>Submit Source code, Screenshot, Instructions and Demo URL.</p>
+</li>
+</ol></div>
+    </div>
+    <div class="clear"></div>
+    <div class="submit-form">
+        <form name="file-form" class="ajax-form" method="POST" enctype="multipart/form-data" ajax="/AJAX/file-submission-view/384/f/" show-progress="true" progress-block-id="file-form-progressbar-block" target="problem-detail" success="REPLACE" error="REPLACE">
+            <div id="file-form-progressbar-block"></div>
+        <div style="display:none"><input type="hidden" name="csrfmiddlewaretoken" value="ubFKTsHeSCWiFkIbtw9QMG2DWpWMSR8T"></div>
+<div class="wrapper body-font"><b> Upload File </b>
+    <span class="id_upload-1cede1e2e5f045b184dcf830be314f3b">
+    <input type="file" name="upload" id="id_upload">
+    
+    </span>
+</div>
+
+<div class="weight-600 body-font">Instructions to unzip and setup project</div>
+<ul class="no-padding">
+    <li class="help-button light" title="Code Sample &lt;pre&gt;&lt;code&gt; Ctrl+K">
+        <i> click<span style="background-position: -80px 0px;"></span> to highlight code</i>
+    </li>
+</ul>
+<br>
+<div class="wmd-container wrapper">
+    <div class="wmd-panel wmd-panel-1cede1e2e5f045b184dcf830be314f3b">
+        <div id="wmd-button-bar" class="wmd-button-row-wrapper"><ul id="wmd-button-row" class="wmd-button-row"><li class="wmd-button" id="wmd-bold-button" title="Strong &lt;strong&gt; Ctrl+B" style="left: 0px;"><span style="background-position: 0px 0px;"></span></li><li class="wmd-button" id="wmd-italic-button" title="Emphasis &lt;em&gt; Ctrl+I" style="left: 25px;"><span style="background-position: -20px 0px;"></span></li><li class="wmd-spacer wmd-spacer1" id="wmd-spacer1"></li><li class="wmd-button" id="wmd-link-button" title="Hyperlink &lt;a&gt; Ctrl+L" style="left: 75px;"><span style="background-position: -40px 0px;"></span></li><li class="wmd-button" id="wmd-quote-button" title="Blockquote &lt;blockquote&gt; Ctrl+Q" style="left: 100px;"><span style="background-position: -60px 0px;"></span></li><li class="wmd-button" id="wmd-code-button" title="Code Sample &lt;pre&gt;&lt;code&gt; Ctrl+K" style="left: 125px;"><span style="background-position: -80px 0px;"></span></li><li class="wmd-button" id="wmd-image-button" title="Image &lt;img&gt; Ctrl+G" style="left: 150px;"><span style="background-position: -100px 0px;"></span></li><li class="wmd-spacer wmd-spacer2" id="wmd-spacer2"></li><li class="wmd-button" id="wmd-olist-button" title="Numbered List &lt;ol&gt; Ctrl+O" style="left: 200px;"><span style="background-position: -120px 0px;"></span></li><li class="wmd-button" id="wmd-ulist-button" title="Bulleted List &lt;ul&gt; Ctrl+U" style="left: 225px;"><span style="background-position: -140px 0px;"></span></li><li class="wmd-button" id="wmd-heading-button" title="Heading &lt;h1&gt;/&lt;h2&gt; Ctrl+H" style="left: 250px;"><span style="background-position: -160px 0px;"></span></li><li class="wmd-button" id="wmd-hr-button" title="Horizontal Rule &lt;hr&gt; Ctrl+R" style="left: 275px;"><span style="background-position: -180px 0px;"></span></li><li class="wmd-spacer wmd-spacer3" id="wmd-spacer3"></li><li class="wmd-button" id="wmd-undo-button" title="Undo - Ctrl+Z" style="left: 325px;"><span style="background-position: -200px -20px;"></span></li><li class="wmd-button" id="wmd-redo-button" title="Redo - Ctrl+Shift+Z" style="left: 350px;"><span style="background-position: -220px -20px;"></span></li></ul><div class="wmd-right-options" style=""><div class="wmd-right-option wmd-close-fullscreen" style="display:none"><i class="fa fa-compress" title="Close fullscreen"></i></div><div class="wmd-right-option wmd-go-fullscreen" style=""><i class="fa fa-arrows-alt" title="Go fullscreen"></i></div></div></div>
+        <textarea id="wmd-input" rows="10" cols="40" name="description_text" class="wmd-input" style="height: 98px;"></textarea>
+    </div>
+
+    <div class="wmd-preview-container hidden">
+        <div class="section-header standard-margin caps">Preview</div>
+        <div id="wmd-preview" class="wmd-panel wmd-preview less-margin"></div>
+    </div>
+</div>
+<div class="clear"></div>
+<div class="standard-margin">
+<input type="submit" class="button btn-blue float-left file-submit-answer file-submit-answer-1cede1e2e5f045b184dcf830be314f3b" clicked="saving.." name="submit" value="Save Answer">
+
+</div>
+
+
+
+        </form>
+    </div>
+</div> <!-- file problem -->
+
+
+
+
+</div>
+      </div>
+    </div>
+    <div class="right-pane-footer"></div>
+    <div class="right-pane-view-caret"></div>
+  </div> <!-- /right-pane -->
+
+</div> <!-- /view-body -->
+
+
+
+
+
+<div id="external-link-modal" class="modal-window very-large-modal">
+  <div class="modal-content large dark align-left">
+    <iframe id="external-link-iframe" class="external-link-iframe-in-modal" frameborder="0" src="./Problems - Treebo Hotels Full Stack Developer Hiring Challenge_files/saved_resource.html"></iframe>
+</div>
+</div>
+
+<div id="event-url" class="hidden">/treebo-hotels-full-stack-developer-hiring-challenge/</div>
+<div id="upload-snapshot-url" class="hidden">/AJAX/treebo-hotels-full-stack-developer-hiring-challenge/upload-snapshot/</div>
+<div id="activity-log-url" class="hidden">/treebo-hotels-full-stack-developer-hiring-challenge/log_activity/</div>
+
+<div id="logout-reason-url" class="hidden" ajax="/utilityapp/log-user-logout-reason/" event_id="18029" user_id="910160"></div>
+
+<div id="get-user-logout-data" class="hidden" ajax="/utilityapp/get-user-logout-data/" event_id="18029" user_id="910160"></div>
+
+    </div>
+    
+
+    
+    <div id="ghost-ping-url" class="hidden" ajax="/ghost/ping/"></div>
+
+    
+    
+
+    
+
+    
+      
+      
+    
+
+    
+    <script type="text/javascript">
+      // Make the static variable available for all js files
+      var STATIC_URL = "https://hackerearth.global.ssl.fastly.net/static/";
+
+      // Store CSRF_COOKIE
+      var CSRF_COOKIE_USED = "True";
+      var CSRF_COOKIE = "ubFKTsHeSCWiFkIbtw9QMG2DWpWMSR8T";
+
+      var CURRENT_PATH = "https://www.hackerearth.com/treebo-hotels-full-stack-developer-hiring-challenge/problems/";
+      var HISTORY = '[]';
+
+      // Used in idev3.js
+      var is_user_logged_in = true;
+    </script>
+
+    
+    <script type="text/javascript" src="./Problems - Treebo Hotels Full Stack Developer Hiring Challenge_files/alljs.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./Problems - Treebo Hotels Full Stack Developer Hiring Challenge_files/base1.0.1.js" crossorigin="anonymous"></script>
+    <script src="./Problems - Treebo Hotels Full Stack Developer Hiring Challenge_files/api.js" async="" defer=""></script>
+
+    
+    <script>
+      (function(_,e,rr,s){_errs=[s];var c=_.onerror;_.onerror=function(){var a=arguments;_errs.push(a);
+      c&&c.apply(this,a)};var b=function(){var c=e.createElement(rr),b=e.getElementsByTagName(rr)[0];
+      c.src="//beacon.errorception.com/"+s+".js";c.async=!0;b.parentNode.insertBefore(c,b)};
+      _.addEventListener?_.addEventListener("load",b,!1):_.attachEvent("onload",b)})
+      (window,document,"script","55ba39a81acd32ac7d0002d4");
+    </script>
+
+    
+    <script type="text/x-mathjax-config;executed=true">
+      MathJax.Hub.Config({messageStyle: "none",
+        tex2jax: {
+          inlineMath: [['$$','$$']],
+          displayMath: [['$$$', '$$$']],
+          preview: "none"
+        }
+      });
+    </script>
+    <script type="text/javascript" async="" src="./Problems - Treebo Hotels Full Stack Developer Hiring Challenge_files/MathJax.js"></script>
+    <script type="text/javascript" src="./Problems - Treebo Hotels Full Stack Developer Hiring Challenge_files/MathJax(1).js"></script>
+
+    <script type="text/javascript">
+      window.addEventListener("load", function() {
+        MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+      });
+    </script>
+    
+
+    <script type="text/javascript">
+      // Used in offline js which shows a bar on top when user goes offline
+      Offline.options = {
+        interceptRequests: false,
+        requests: false,
+      };
+    </script>
+
+    
+    <script type="text/javascript" src="./Problems - Treebo Hotels Full Stack Developer Hiring Challenge_files/detect_timezone.js" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      function setTimezoneCookie(detected_user_tz) {
+        /* Sets the detected user timezone as a cookie in the browser.
+           If someone changes it or removes it, a sanity check is
+           performed and the cookie is reset.
+
+           This cookie is set for ready availability of user timezone
+           in the backend.
+        */
+        const USER_TIMEZONE_COOKIE = 'user_tz';
+        // Try to get the existing user timezone cookie stored
+        // in the browser.
+        user_tz = readCookie(USER_TIMEZONE_COOKIE);
+        // Flag to determine whether a new cookie has to be created.
+        create_cookie = false;
+        if(user_tz) {
+          if(user_tz !== detected_user_tz) {
+            // If someone has changed the cookie in some way, we
+            // set a new cookie.
+            eraseCookie(USER_TIMEZONE_COOKIE);
+            create_cookie = true;
+          }
+        } else {
+          create_cookie = true;
+        }
+        // Create a new cookie if create_cookie flag is set.
+        createCookie(USER_TIMEZONE_COOKIE, detected_user_tz, 1);
+      }
+      $(document).ready(function(){
+        var timezone = jstz.determine_timezone(); // Now you have an instance of the TimeZone object.
+        // Set as a cookie in browser for easy access in backend.
+        setTimezoneCookie(timezone.name());
+
+        // Set as a js variable for easy access across frontend.
+        USER_TIMEZONE = timezone.name()
+
+        
+          var profile_timezone = "Asia/Kolkata";
+          if (timezone.name() !== profile_timezone) {
+            $.ajax({
+              type: "POST",
+              url: "/users/AJAX/set-timezone/",
+              data: {
+                'timezone': timezone.name(),
+              },
+            });
+          }
+        
+      });
+    </script>
+
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-34729975-1', 'auto');
+      ga('require', 'displayfeatures');
+      
+      ga('set', '&uid', 910160);
+      
+      ga('send', 'pageview');
+    </script>
+    
+
+    
+    <script type="text/javascript">
+    (function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f);b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2}})(document,window.mixpanel||[]);mixpanel.init("4c30b8635363027dfb780d5a61785112");
+    </script>
+
+    <script type="text/javascript">
+    
+      
+        mixpanel.register({
+          "url_path": "/treebo-hotels-full-stack-developer-hiring-challenge/problems/",
+          "username": "nitin363",
+          "email": "25nitin.nagar@gmail.com",
+          "date_of_joining": "Sept. 11, 2016, 2:45 p.m.",
+          "user_bucket": "59"
+        });
+        
+      
+      $(document).ready(function(){
+        //mixpanel delegate links custom method
+        mixpanel.delegate_links = function (parent, selector, event_name, properties) {
+          properties = properties || {};
+          parent = parent || document.body;
+          parent = $(parent);
+          parent.on('click', selector, function (event) {
+            var new_tab = event.which === 2 || event.metaKey || event.target.target === '_blank' || this.target === '_blank';
+            properties.url = event.target.href || this.href;
+            function callback() {
+              if (new_tab) {
+                return;
+              }
+              window.location = properties.url;
+            }
+            if (!new_tab) {
+              event.preventDefault();
+              setTimeout(callback, 300);
+            }
+            mixpanel.track(event_name, properties, callback);
+          });
+        };
+      });
+    
+    </script>
+    
+
+    
+    <script type="text/javascript">
+      // Include the UserVoice JavaScript SDK (only needed once on a page)
+      UserVoice=window.UserVoice||[];
+      (function(){
+        var uv=document.createElement('script');
+        uv.type='text/javascript';
+        uv.async=true;
+        uv.src='//widget.uservoice.com/5F90ycbP4JOg1fOUoELScA.js';
+        var s=document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(uv,s)})();
+
+      //
+      // UserVoice Javascript SDK developer documentation:
+      // https://www.uservoice.com/o/javascript-sdk
+      //
+
+      // Set colors
+      UserVoice.push(['set', {
+        accent_color: '#448dd6',
+        trigger_color: 'white',
+        trigger_background_color: 'rgba(46, 49, 51, 0.6)'
+      }]);
+
+      // Identify the user and pass traits
+      // To enable, replace sample data with actual user traits and uncomment the line
+      UserVoice.push(['identify', {
+        //email:      'john.doe@example.com', // User’s email address
+        //name:       'John Doe', // User’s real name
+        //created_at: 1364406966, // Unix timestamp for the date the user signed up
+        //id:         123, // Optional: Unique id of the user (if set, this should not change)
+        //type:       'Owner', // Optional: segment your users by type
+        //account: {
+        //  id:           123, // Optional: associate multiple users with a single account
+        //  name:         'Acme, Co.', // Account name
+        //  created_at:   1364406966, // Unix timestamp for the date the account was created
+        //  monthly_rate: 9.99, // Decimal; monthly rate of the account
+        //  ltv:          1495.00, // Decimal; lifetime value of the account
+        //  plan:         'Enhanced' // Plan name for the account
+        //}
+      }]);
+
+      // Add default trigger to the bottom-right corner of the window:
+      UserVoice.push(['addTrigger', { mode: 'contact', trigger_position: 'bottom-right' }]);
+
+      // Or, use your own custom trigger:
+      //UserVoice.push(['addTrigger', '#id', { mode: 'contact' }]);
+
+      // Autoprompt for Satisfaction and SmartVote (only displayed under certain conditions)
+      UserVoice.push(['autoprompt', {}]);
+    </script>
+    
+
+    
+
+<script type="text/javascript" src="./Problems - Treebo Hotels Full Stack Developer Hiring Challenge_files/bigpipe.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="./Problems - Treebo Hotels Full Stack Developer Hiring Challenge_files/history.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="./Problems - Treebo Hotels Full Stack Developer Hiring Challenge_files/Markdown.All.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="./Problems - Treebo Hotels Full Stack Developer Hiring Challenge_files/prettifyall.js" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="./Problems - Treebo Hotels Full Stack Developer Hiring Challenge_files/lab.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="./Problems - Treebo Hotels Full Stack Developer Hiring Challenge_files/progress_bar.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="./Problems - Treebo Hotels Full Stack Developer Hiring Challenge_files/jquery.joyride-2.1.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="./Problems - Treebo Hotels Full Stack Developer Hiring Challenge_files/redirect_on_event_end.js" crossorigin="anonymous"></script>
+
+
+<script type="text/javascript" src="./Problems - Treebo Hotels Full Stack Developer Hiring Challenge_files/jquery.iframetracker.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="./Problems - Treebo Hotels Full Stack Developer Hiring Challenge_files/problems_new.js" crossorigin="anonymous"></script>
+
+
+<script type="text/javascript" src="./Problems - Treebo Hotels Full Stack Developer Hiring Challenge_files/test_proctor.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="./Problems - Treebo Hotels Full Stack Developer Hiring Challenge_files/activity_log.js" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+  // Make code constants available globally in JS
+  // Move to problems page if needed
+  var MAP_LANG_TO_NAME = {"LUA": "Lua", "PASCAL": "Pascal", "CSHARP": "C#", "CPP": "C++", "PYTHON3": "Python 3", "POSTGRESQL": "PostgreSQL", "SCALA": "Scala", "PERL": "Perl", "HASKELL": "Haskell", "D": "D", "R": "R(RScript)", "CPP11": "C++11", "GO": "Go", "RUBY": "Ruby", "GROOVY": "Groovy", "LOLCODE": "LOLCODE", "LISP": "Lisp", "Text": "Text", "WHENEVER": "Whenever", "MYSQL": "MySQL", "OBJECTIVEC": "Objective-C", "PHP": "PHP", "JAVASCRIPT_UI": "JavaScript", "PYTHON": "Python", "JAVASCRIPT": "JavaScript(Rhino)", "VB": "Visual Basic", "vp": "N/A", "TEXTFILE": "Text", "JAVA8": "Java 8", "JAVASCRIPT_NODE": "JavaScript(Node.js)", "RACKET": "Racket", "HTML": "HTML", "SWIFT": "Swift", "RUST": "Rust", "FSHARP": "F#", "C": "C", "OCAML": "OCaml", "OCTAVE": "Octave", "CLOJURE": "Clojure", "BEFUNGE": "Befunge", "CSS": "CSS", "ERLANG": "Erlang", "JAVA": "Java", "LISP_SBCL": "Lisp (SBCL)", "JULIA": "Julia", "MSSQL": "MSSQL"};
+  var MAP_NAME_TO_LANG = {"Lisp (SBCL)": "LISP_SBCL", "Java": "JAVA", "Scala": "SCALA", "JavaScript": "JAVASCRIPT_UI", "Perl": "PERL", "Lua": "LUA", "JavaScript(Rhino)": "JAVASCRIPT", "MySQL": "MYSQL", "Erlang": "ERLANG", "LOLCODE": "LOLCODE", "C#": "CSHARP", "Whenever": "WHENEVER", "HTML": "HTML", "Rust": "RUST", "Octave": "OCTAVE", "Ruby": "RUBY", "Groovy": "GROOVY", "C": "C", "Python 3": "PYTHON3", "Lisp": "LISP", "F#": "FSHARP", "N/A": "vp", "C++": "CPP", "Racket": "RACKET", "Objective-C": "OBJECTIVEC", "Swift": "SWIFT", "R(RScript)": "R", "D": "D", "Clojure": "CLOJURE", "Befunge": "BEFUNGE", "Java 8": "JAVA8", "CSS": "CSS", "PostgreSQL": "POSTGRESQL", "Text": "TEXTFILE", "OCaml": "OCAML", "Julia": "JULIA", "JavaScript(Node.js)": "JAVASCRIPT_NODE", "Python": "PYTHON", "Pascal": "PASCAL", "Haskell": "HASKELL", "C++11": "CPP11", "Go": "GO", "Visual Basic": "VB", "PHP": "PHP", "MSSQL": "MSSQL"};
+
+  var take_candidate_snapshot =  false ;
+
+  $(document).ready(function() {
+
+    G_SCRIPTS_LOADED = true;
+    
+
+    
+
+    // There is an issue with UV Iframe and Tab switch feature
+    UserVoiceIframeLoader();
+
+    
+
+    
+
+    
+
+    $(".question-item").on("click", function(event) {
+      $(this).find(".tool-tip").attr('title', $(this).find(".tool-tip").data("title"));
+    });
+  });
+
+  
+
+  var gEditorScriptsLoaded = false;
+  var gEditorScriptsLoading = false;
+
+  var m_private_test_walkthrough = false;
+  
+    m_private_test_walkthrough = true;
+  
+</script>
+<script type="text/javascript" src="./Problems - Treebo Hotels Full Stack Developer Hiring Challenge_files/flow_action.js" crossorigin="anonymous"></script>
+
+
+    <div id="instructions-modal" class="modal-window very-large-modal">
+    <div class="modal-header">
+        Instructions
+    </div>
+    <div class="modal-content">
+        
+
+        <div class="content-heading">Test Instructions</div>
+        <div class="body-font standard-margin-bottom">
+            
+            <p>1) There will be a problem statement provided in the challenge for which you have to build a functional app. Depending on the question it could be a web app, a mobile app, desktop app or any other kind of application.<br>
+2) Each problem generally has the essential feature sets you need to built, a list of good to have features which are not mandatory but give you extra score and a visual description of the problem statement.<br>
+3) Once you have built your application, you need to zip the source files and upload it via the upload option given in the problem statement.<br>
+4) The submissions are evaluated manually by an expert.<br>
+5) The evaluation is mostly based on the following parameters - functionality of the app, design aesthetics and the quality of code written.<br>
+6) The evaluation of submissions can take up to a week's time.  </p>
+            
+        </div>
+
+        <div class="content-heading standard-margin">General Guidelines</div>
+        <div class="body-font standard-margin-bottom">
+            <ol>
+                <li>This test contains <span class="weight-700">1 File questions</span>.</li>
+                <li>Duration of this test is <span class="weight-700">12 hrs </span>. Your time will start when you see the questions.
+                    Once you start the test, you can not pause it.
+                </li>
+                <li>
+                    Please DO NOT use any Online Development Environment which exposes your code to the public.
+                    We take plagiarism seriously and do not entertain any activity which is against the spirit of
+                    learning/ programming. Violations can lead to account suspension or permanent blacklisting from HackerEarth.
+                </li>
+            </ol>
+        </div>
+
+    </div> <!-- /modal-content -->
+</div>
+
+  
+
+<div id="tiptip_holder" style="max-width:200px;"><div id="tiptip_arrow"><div id="tiptip_arrow_inner"></div></div><div id="tiptip_content"></div></div><div style="position:fixed; top:0; left:0; overflow:hidden;"><input style="position:absolute; left:-300px;" type="text" value="" id="focus_retriever" readonly="true"></div><div class="offline-ui offline-ui-up"><div class="offline-ui-content"></div></div><div data-html2canvas-ignore="true" class="uv-icon uv-bottom-right"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="39px" height="39px" viewBox="0 0 39 39" enable-background="new 0 0 39 39" xml:space="preserve">
+<g>
+	<path class="uv-bubble-background" fill="rgba(46, 49, 51, 0.6)" d="M31.425,34.514c-0.432-0.944-0.579-2.007-0.591-2.999c4.264-3.133,7.008-7.969,7.008-13.409
+		C37.842,8.658,29.594,1,19.421,1S1,8.658,1,18.105c0,9.446,7.932,16.79,18.105,16.79c1.845,0,3.94,0.057,5.62-0.412
+		c0.979,1.023,2.243,2.3,2.915,2.791c3.785,2.759,7.571,0,7.571,0S32.687,37.274,31.425,34.514z" style="fill: rgba(46, 49, 51, 0.6);"></path>
+	<g>
+		<g>
+			<path class="uv-bubble-foreground" fill="#FFFFFF" d="M16.943,19.467c0-3.557,4.432-3.978,4.432-6.058c0-0.935-0.723-1.721-2.383-1.721
+				c-1.508,0-2.773,0.725-3.709,1.87l-2.441-2.743c1.598-1.9,4.01-2.924,6.602-2.924c3.891,0,6.271,1.959,6.271,4.765
+				c0,4.4-5.037,4.732-5.037,7.265c0,0.481,0.243,0.994,0.574,1.266l-3.316,0.965C17.303,21.459,16.943,20.522,16.943,19.467z
+				 M16.943,26.19c0-1.326,1.114-2.441,2.44-2.441c1.327,0,2.442,1.115,2.442,2.441c0,1.327-1.115,2.441-2.442,2.441
+				C18.058,28.632,16.943,27.518,16.943,26.19z" style="fill: white;"></path>
+		</g>
+	</g>
+</g>
+</svg>
+</div></body></html>
